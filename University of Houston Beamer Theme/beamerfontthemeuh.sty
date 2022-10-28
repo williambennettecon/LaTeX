@@ -1,0 +1,31 @@
+\DeclareOptionBeamer{stillsansserifmath}[]{\def\mathfamilydefault{\sfdefault}\beamer@sansmathtrue}
+\DeclareOptionBeamer{stillsansserifsmall}[]{\def\beamer@tsfont{\sffamily}}
+\DeclareOptionBeamer{stillsansseriflarge}[]{\def\beamer@sfont{\sffamily}}
+\DeclareOptionBeamer{stillsansseriftext}[]{\def\familydefault{\sfdefault}}
+
+\DeclareOptionBeamer{onlymath}[]{
+  \def\beamer@tsfont{\sffamily}
+  \def\beamer@sfont{\sffamily}
+  \def\familydefault{\sfdefault}
+}
+
+\def\beamer@tsfont{\rmfamily}
+\def\beamer@sfont{\rmfamily}
+\def\familydefault{\rmdefault}
+\def\mathfamilydefault{\rmdefault}
+\beamer@sansmathfalse
+
+\ProcessOptionsBeamer
+
+\setbeamerfont{tiny structure}{family=\beamer@tsfont}
+\setbeamerfont{structure}{family=\beamer@sfont}
+
+\setbeamerfont{title}{size=\LARGE,parent=structure}
+
+\setbeamerfont{subtitle}{size=\Large,parent=title}
+
+\setbeamerfont{author}{size=\large}
+
+\setbeamerfont{institute}{size=\normalsize}
+
+\setbeamerfont{date}{size=\small}

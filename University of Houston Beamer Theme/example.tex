@@ -1,0 +1,91 @@
+\documentclass[12pt, aspectratio=96]{beamer}
+\usetheme{UH}
+\usepackage{pgfpages}
+\usepackage[english]{babel}
+
+\usepackage{appendixnumberbeamer}
+% Add total frame count to slides, optional. From Stefan,
+% http://www.latex-community.org/forum/viewtopic.php?f=4&t=2173
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
+
+\title[Short Title]{Title}
+%\subtitle{Sub-Title}
+\author[Short Author]{Author}
+\institute[UH]{University of Houston}
+\date{Date}
+
+
+\begin{document}
+
+\begin{frame}[plain]
+\titlepage
+\addtocounter{framenumber}{-1}
+\end{frame}
+
+%\setcounter{framenumber}{0}
+\section{Section 1}
+\subsection{Sub-Section 1}
+\frame{
+{A}
+Blah blah blah.
+\begin{itemize}
+    \item Blah \hyperlink{site_1}{\beamergotobutton{}}\label{site1}
+    \begin{itemize}
+        \item Blah \hyperlink{site_2}{\beamergotobutton{}}\label{site2}
+        \begin{itemize}
+            \item Blah \hyperlink{site_3}{\beamergotobutton{}}\label{site3}
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+}
+\frame{{B} Blah blah blah.}
+\frame{{C} Blah blah blah.}
+\subsection{Sub-Section 2}
+\frame{{D} Blah blah blah.}
+\frame{{E} Blah blah blah.}
+\frame{{F} Blah blah blah.}
+
+\section{Section 2}
+\subsection{Sub-Section 1}
+\frame{{G} Blah blah blah.}
+\frame{{H} Blah blah blah.}
+\frame{{I} Blah blah blah.}
+\subsection{Sub-Section 2}
+\frame{{J} Blah blah blah.}
+\frame{{K} Blah blah blah.}
+\frame{{L} Blah blah blah.}
+
+\section{Section 3}
+\subsection{Sub-Section 1}
+\frame{{M} Blah blah blah.}
+\frame{{N} Blah blah blah.}
+\frame{{O} Blah blah blah.}
+\subsection{Sub-Section 2}
+\frame{{P} Blah blah blah.}
+\frame{{Q} Blah blah blah.}
+\frame{{R} Blah blah blah.}
+
+\appendix
+\section{appendixname}
+\frame{
+{X}
+Blah.
+\hyperlink{site1}{\beamerreturnbutton{}}
+\label{site_1}
+}
+\frame{
+{Y}
+Blah.
+\hyperlink{site2}{\beamerreturnbutton{}}
+\label{site_2}
+}
+\subsection{Appendix Sub-Section 1}
+\frame{
+{Z}
+Blah.
+\hyperlink{site3}{\beamerreturnbutton{}}
+\label{site_3}
+}
+
+\end{document}
